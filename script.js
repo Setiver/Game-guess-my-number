@@ -12,7 +12,6 @@ const guessSelector = document.querySelector('.guess');
 const displayMessage = function (message) {
   document.querySelector('.message').textContent = message;
 };
-
 document.querySelector('.check').addEventListener('click', function () {
   const guess = Number(guessSelector.value);
 
