@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  background-image: linear-gradient(rgb(255, 212, 212), rgb(0, 94, 255));
+  font-family: 'Libre Baskerville', serif;
+}
+
+header {
+  position: relative;
+  height: 35vh;
+  border-bottom: 7px solid #000000;
+}
+
+main {
+  height: 65vh;
+  color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+h1 {
+  font-size: 3rem;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 25%;
+  transform: translate(-50%, -50%);
+}
+
+.left {
+  width: 52rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.right {
+  width: 52rem;
+  font-size: 2rem;
+}
+
+.number {
+  text-align: center;
+  position: absolute;
+  width: 7rem;
+  font-size: 5rem;
+  padding: 2rem;
+  bottom: -20%;
+  left: 50%;
+  background: rgb(247, 244, 223);
+  color: rgb(0, 0, 0);
+  transform: translate(-50%, -50%);
+}
+
+.between {
+  text-align: center;
+  position: absolute;
+  font-size: 2rem;
+  top: 38%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(69, 69, 69);
+}
+
+.guess {
+  width: 10rem;
+  font-size: 4rem;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-family: inherit;
+  color: black;
+  background-color: #eee;
+  border: 5px solid red;
+  display: block;
+}
+
+/* Buttons */
+
+.btn {
+  font-family: inherit;
+  display: block;
+  cursor: pointer;
+}
+
+.check {
+  width: 10rem;
+  font-size: 2.5rem;
+  padding: 1rem;
+}
+
+.again {
+  font-size: 2rem;
+  border-color: aqua;
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  padding: 4px;
+}
+/*-----*/
+.message {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.show-score {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.show-highscore {
+  text-align: center;
+  margin-bottom: 5rem;
+}
