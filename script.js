@@ -8,10 +8,12 @@ const scoreSelector = document.querySelector('.score');
 const numberSelector = document.querySelector('.number');
 const bodySelector = document.querySelector('body').style.backgroundImage;
 const guessSelector = document.querySelector('.guess');
+const messageSelector = document.querySelector('.message');
 
 const displayMessage = function (message) {
-  document.querySelector('.message').textContent = message;
+  messageSelector.textContent = message;
 };
+
 document.querySelector('.check').addEventListener('click', function () {
   const guess = Number(guessSelector.value);
 
@@ -22,12 +24,14 @@ document.querySelector('.check').addEventListener('click', function () {
   if (guess === unknownNumber) {
     displayMessage('✨You Win✨');
     numberSelector.textContent = unknownNumber;
-
-    bodySelector = 'linear-gradient(rgb(0, 229, 250), rgb(0, 199, 100))';
+    messageSelector.style.color = 'green';
 
     if (score > highscore) {
       highscore = score;
       document.querySelector('.highscore').textContent = highscore;
+      if (highscore === 20) {
+        document.querySelector('.show-highscore').style.color = 'gold';
+      }
     }
   }
 
@@ -38,9 +42,9 @@ document.querySelector('.check').addEventListener('click', function () {
       scoreSelector.textContent = score;
     } else {
       displayMessage('You lost 😥');
+      messageSelector.style.color = 'red';
       scoreSelector.textContent = 0;
       numberSelector.textContent = unknownNumber;
-      bodySelector = 'linear-gradient(-45deg, #ffe9e2, #ff0000, #8600a8, #220035)';
     }
   }
 });
@@ -49,9 +53,9 @@ document.querySelector('.again').addEventListener('click', function () {
   score = 20;
   unknownNumber = Math.trunc(Math.random() * 50) + 1;
 
-  displayMessage('What nuber there is?');
-  scoreQuery.textContent = 20;
+  displayMessage('What number there is? 🤔');
+  scoreSelector.textContent = 20;
   numberSelector.textContent = '?';
   guessSelector.value = '';
-  bodySelector = 'llinear-gradient(-45deg, #ff3c01, #00d478, #4acfff, #ffee36)';
+  messageSelector.style.color = 'inherit';
 });
