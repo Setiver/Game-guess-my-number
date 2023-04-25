@@ -7,8 +7,24 @@
 }
 
 body {
-  background-image: linear-gradient(rgb(255, 212, 212), rgb(0, 94, 255));
+  /* Moving gradient */
+  background: linear-gradient(-45deg, #ff3c01, #00d478, #4acfff, #ffee36);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  height: 100vh;
   font-family: 'Libre Baskerville', serif;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 header {
@@ -78,7 +94,8 @@ h1 {
   font-family: inherit;
   color: black;
   background-color: #eee;
-  border: 5px solid red;
+  border: 5px solid;
+  border-color: rgb(255, 220, 220);
   display: block;
 }
 
